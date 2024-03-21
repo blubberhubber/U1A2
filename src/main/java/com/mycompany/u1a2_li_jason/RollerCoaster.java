@@ -159,10 +159,10 @@ public class RollerCoaster extends javax.swing.JFrame {
             else if (heartProblems.isEmpty()){
                 jTextField4.setText("Please enter a value for heart problems");
             }
-            else if (!backProblems.equals("n") || !backProblems.equals("y")){
+            else if (!backProblems.equals("n") && !backProblems.equals("y")){
                 jTextField4.setText("Please enter y or n for back problems");
             }
-            else if (!heartProblems.equals("n") || !backProblems.equals("y")){
+            else if (!heartProblems.equals("n") && !heartProblems.equals("y")){
                 jTextField4.setText("Please enter y or n for heart problems");
             }
             else {
