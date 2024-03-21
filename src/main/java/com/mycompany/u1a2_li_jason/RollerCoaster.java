@@ -47,7 +47,7 @@ public class RollerCoaster extends javax.swing.JFrame {
 
         heightLabel.setText("Enter height in cm:");
 
-        backLabel.setText("Back Troubles? Y/N:");
+        backLabel.setText("Back Problems? Y/N:");
 
         heartLabel.setText("Heart Problems? Y/N:");
 
@@ -145,15 +145,27 @@ public class RollerCoaster extends javax.swing.JFrame {
         try {
             
             String height = jTextField1.getText();
-            int heightNum = Integer.parseInt(height);
-            String backTrouble = jTextField2.getText().toLowerCase();
-            String heartTrouble = jTextField3.getText().toLowerCase();
+            int heightNum = 0;
+            heightNum = Integer.parseInt(height);
+            String backProblems = jTextField2.getText().toLowerCase();
+            String heartProblems = jTextField3.getText().toLowerCase();
 
-            if (heightNum > 122 && heightNum < 188 && heartTrouble.equals("n") && backTrouble.equals("n")) {
-
+            if (heightNum > 122 && heightNum < 188 && heartProblems.equals("n") && backProblems.equals("n")) {
                 jTextField4.setText("You can ride the roller coaster!");
-
-            } else {
+            } 
+            else if (backProblems.isEmpty()){
+                jTextField4.setText("Please enter a value for back problems");
+            }
+            else if (heartProblems.isEmpty()){
+                jTextField4.setText("Please enter a value for heart problems");
+            }
+            else if (!backProblems.equals("n") || !backProblems.equals("y")){
+                jTextField4.setText("Please enter y or n for back problems");
+            }
+            else if (!heartProblems.equals("n") || !backProblems.equals("y")){
+                jTextField4.setText("Please enter y or n for heart problems");
+            }
+            else {
                 jTextField4.setText("Sorry, it's not safe for you to ride the roller coaster.");
             }
 

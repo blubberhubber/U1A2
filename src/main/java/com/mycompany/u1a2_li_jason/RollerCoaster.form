@@ -118,7 +118,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="backLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Back Troubles? Y/N:"/>
+        <Property name="text" type="java.lang.String" value="Back Problems? Y/N:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="heartLabel">
